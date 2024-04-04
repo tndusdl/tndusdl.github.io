@@ -1,0 +1,42 @@
+---
+layout: single
+title:  "12장 함수"
+---
+#함수 정의
+:함수는 function 키워드를 사용하여 정의함.
+ex)
+function functionName(parameters) {
+    // 함수 본문
+}
+parameters는 함수의 입력값을 나타냄.
+functionName은 함수의 이름으로, 함수를 호출할 때 사용됨.
+
+#함수 호출:
+함수를 호출하기 위해서는 함수의 이름을 사용하고 필요한 인자(입력값)를 전달함.
+ex)
+functionName(arguments);
+
+#매개변수와 전달인자:
+함수 정의 시에 선언된 변수들을 매개변수라고 함. 
+함수 호출 시 전달하는 값들은 전달인자 또는 인자라고 함.
+매개변수는 함수 본문에서 변수로 사용됨.
+
+#반환값:
+함수는 작업을 수행하고 그 결과를 반환할 수 있음. 
+반환값은 return 키워드를 통해 지정됨.
+반환값이 명시되지 않은 경우, 함수는 undefined를 반환함.
+
+
+#익명 함수:
+함수에 이름을 지정하지 않고도 함수를 정의할 수 있음.
+ex)
+var anonymousFunction = function(parameters) {
+    // 함수 본문
+};
+
+#화살표 함수:
+ES6부터 도입된 화살표 함수는 익명 함수를 간결하게 작성할 수 있는 방법임.
+ex)
+var arrowFunction = (parameters) => {
+    // 함수 본문
+};
