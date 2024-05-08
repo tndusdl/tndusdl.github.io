@@ -1,0 +1,55 @@
+---
+layout: single
+title:  "17장 생성자 함수에 의한 객체 생성"
+---
+
+#생성자 함수 정의
+:생성자 함수는 일반 함수와 마찬가지로 JavaScript에서 정의됨.
+그생성자 함수는 주로 객체를 생성하기 위해 사용되고, 
+생성자 함수는 일반적으로 PascalCase로 명명됨.
+ex)
+javascript
+Copy code
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+}
+-> 위의 예제에서 Person이라는 생성자 함수는 name과 age라는 두 개의 매개변수를 받아 객체를 생성함.
+
+
+#객체 생성
+: new 키워드를 사용하여 생성자 함수를 호출하여 객체를 생성함.
+new 키워드를 사용하면 내부적으로 새로운 객체가 생성되고 생성자 함수 내의 this는 이 새로운 객체를 가리키게 됨.
+ex)
+javascript
+Copy code
+let person1 = new Person('John', 30);
+let person2 = new Person('Alice', 25);
+-> 위의 예제에서 person1과 person2는 각각 Person 생성자 함수를 사용하여 생성된 객체임.
+
+#속성 및 메서드 추가
+: 생성자 함수 내에서 this 키워드를 사용하여 객체의 속성과 메서드를 정의할 수 있음. 
+이러한 속성과 메서드는 생성된 각 객체의 인스턴스에 대해 개별적으로 유지됨.
+ex)
+javascript
+Copy code
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+    this.sayHello = function() {
+        console.log('Hello, my name is ' + this.name + ' and I am ' + this.age + ' years old.');
+    };
+}
+
+let person1 = new Person('John', 30);
+person1.sayHello(); // 
+
+출력: Hello, my name is John and I am 30 years old.
+
+-> 위의 예제에서 sayHello 메서드는 각 객체의 인스턴스에 대해 고유한 메서드로 동작함.
+생성자 함수를 사용하면 유사한 속성과 동작을 가진 여러 객체를 쉽게 만들 수 있으며, 코드의 재사용성과 유지보수성을 향상시킬 수 있음.
+
+
+
+
+
